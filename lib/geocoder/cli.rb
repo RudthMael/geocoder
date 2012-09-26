@@ -22,6 +22,11 @@ module Geocoder
           end
         end
 
+        opts.on("--username <username>",
+          "Username for Geonames API") do |key|
+          Geocoder::Configuration.username = key
+        end
+
         opts.on("-l <language>", "--language <language>",
           "Language of output (see API docs for valid choices)") do |language|
           Geocoder::Configuration.language = language
